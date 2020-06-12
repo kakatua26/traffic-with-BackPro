@@ -41,10 +41,12 @@ with open(filename) as csvfile:
         x.append([[float(row[3]),float(row[4]),float(day),float(row[12].split(':')[0]),float(landmark)],[float(label)]])
         #x = np.append(x, [float(j) for j in row]) -- Comented as only using 1 value
 
-#extract 10 row for testing
-for i in range(0, 9):
+#extract samples row for testing
+for i in (0, 106, 237, 437, 451, 477, 528 ):
     y.append(x[i])
 
+# printing examples test data
+print(y)
 # create a network with two input, two hidden, and one output nodes
 n = NN(5, 5, 1)
 # train it with some patterns
