@@ -3,7 +3,6 @@ import math
 import random
 
 random.seed(0)
-
 # calculate a random number where:  a <= rand < b
 def rand(a, b):
     return (b-a)*random.random() + a
